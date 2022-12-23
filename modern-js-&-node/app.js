@@ -1,10 +1,9 @@
+import express from "express"
 
-const express = require('express');
+import resHandler from "./response-handler.js"
 
-const resHandler = require("./response-handler")
+const app = express()
 
-const app = express();
+app.get("/", resHandler)
 
-app.get('/', resHandler);
-
-app.listen(3000);
+app.listen(3000)
